@@ -12,3 +12,4 @@ set_2 = input_to_list(number[1])
 unieque_elements = set(set_1).intersection(set_2)
 for i in unieque_elements:
     print(i)
+
