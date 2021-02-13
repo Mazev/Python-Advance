@@ -1,7 +1,10 @@
-def reed_matrix(matrix):
-    (rows_count, columns_count) = map(int, input().split())
+rows, cols = [int(el) for el in input().split()]
+
+
+def init_matrix():
+
     matrix = []
-    for row_index in range(rows_count):
+    for _ in range(rows):
         row = [x for x in input().split()]
         matrix.append(row)
     return matrix
@@ -17,4 +20,12 @@ def chek_elements_equal(row, col, matr):
     return False
 
 
-matrix = reed_matrix()
+matrix = init_matrix()
+
+counter = 0
+for row_index in range(rows-1):
+    for col_index in range(cols-1):
+        if chek_elements_equal(row_index, col_index, matrix):
+            counter +=1
+
+print(counter)
