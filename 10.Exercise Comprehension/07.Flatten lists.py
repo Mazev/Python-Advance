@@ -1,7 +1,7 @@
-input_str = input().split("|")[::-1]
+num_lists = [s.split() for s in input().split('|')[::-1]]
+result = []
+for num_list in num_lists:
+    for num in num_list:
+        result.append(num)
+print(' '.join(result))
 
-matrix = [x.split() for x in input_str]
-
-flatten_list = [j for i in matrix for j in i]
-
-print(" ".join(flatten_list))
