@@ -15,10 +15,12 @@ def left_diagonal(matrix):
 
 
 def rath_diagonal(matrix):
-        diagonal_sum = 0
-        for i in range(len(matrix),-1,  -1):
-            diagonal_sum += matrix[i][matrix - i - 1]
-        return diagonal_sum
+    col = len(matrix) - 1
+    diagonal_sum = 0
+    for i in range(len(matrix)):
+        diagonal_sum += matrix[i][col]
+        col -= 1
+    return diagonal_sum
 
 
 matrix = reed_matrix()
