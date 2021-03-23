@@ -6,4 +6,3 @@ def convert_iterable_to_absolute(num_list):
 num = [float(el) for el in input().split()]
 
 print(convert_iterable_to_absolute(num))
-

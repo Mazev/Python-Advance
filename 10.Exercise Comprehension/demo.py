@@ -50,3 +50,5 @@
 # matrix = [[f"{chr(num)}{chr(nestet_nums)}{chr(num)}"for nestet_nums in range(num, num + cols)] for num in range(97, 97 + row)]
 # print(*[' '.join(el) for el in matrix], sep=' \n')
 
+data = [[i for i in el.split()] for el in input().split('|')[::-1]]
+print(*[' '.join(el) for el in data])
