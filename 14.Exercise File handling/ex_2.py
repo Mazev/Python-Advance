@@ -1,0 +1,19 @@
+import re
+
+letter_path = r"[a-zA-Z]"
+punctuation_path = r"[',\.\!\?-]"
+
+
+def get_n(line, regex):
+    return len(re.findall(regex, line))
+
+
+with open('text_2.txt', 'r') as file:
+    lines = file.readlines()
+    counter = 1
+    for line in lines:
+        n_letters = get_n(line, letter_path)
+        n_punctuation = get_n(line, punctuation_path)
+
+        print(f"Line {counter}: {line[:-1]}({n_letters})({n_punctuation})")
+        counter += 1
